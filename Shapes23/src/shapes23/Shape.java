@@ -10,5 +10,7 @@ package shapes23;
  * @author S346795925
  */
 public class Shape {
-    
+    public static void main (String[] args){
+    System.out.println("Hello");
+    }
 }
