@@ -10,9 +10,9 @@ import java.util.*;
  * @author S346795925
  */
 public class Shape {
-    List<Integer> lengths = new ArrayList<>(); 
+    List<Double> lengths = new ArrayList<>(); 
     int sideN;
-    public Shape(int[] sideLength){
+    public Shape(double[] sideLength){
         for(int i=0; i<sideLength.length;i++){
             lengths.add(sideLength[i]);
         }

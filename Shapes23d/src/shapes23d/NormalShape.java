@@ -10,7 +10,7 @@ package shapes23d;
  * @author S346795925
  */
 public class NormalShape extends Shape{
-    public NormalShape(int[] sideLength, int sideNum){
+    public NormalShape(double[] sideLength, int sideNum){
         super(sideLength);
         this.sideN = sideNum;
     }

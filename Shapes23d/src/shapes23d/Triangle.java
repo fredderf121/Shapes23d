@@ -11,7 +11,7 @@ package shapes23d;
  */
 public class Triangle extends Shape {
     
-    public Triangle(int[] sideLengths){
+    public Triangle(double[] sideLengths){
         super(sideLengths);
         sideN = 3;
     }
