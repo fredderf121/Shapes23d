@@ -11,6 +11,36 @@ package Shapes23d;
  */
 public class Prism extends Shape implements threeDimensional {
     
+    public double getValue(String instruction){
+        // helper method to bullet proof and force user to enter a double value
+        System.out.print(instruction);
+        Scanner input = new Scanner(System.in);
+        double val;
+        while (true){
+            try{
+                val=input.nextDouble();
+                break;
+            }
+            catch (InputMismatchException err){
+                input.next();
+                System.out.print("Not a number, try again! "+instruction);
+            }
+        }
+        return val;
+    }    
+    public void getUserInput(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hello, you want to create a prism.");
+        System.out.println("Please enter the number of si");
+        while (true){
+            this.a=getValue("a: ");
+            if (a!=0) break;
+            else System.out.println("\"a\" must NOT equal 0!");
+        }  
+        this.root1=getValue("one root: ");
+        this.root2=getValue("other root: ");    
+    }
+    
     @Override
     public double calculateVolume(double height, double base_area){
         return base_area*height;
