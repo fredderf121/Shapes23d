@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shapes23;
+package shapes23d;
 
 /**
  *
  * @author S346795925
  */
-public class Shape {
-    public static void main (String[] args){
-    System.out.println("Hello");
+public class Triangle extends Shape {
+    
+    public Triangle(double[] sideLengths){
+        super(sideLengths);
+        sideN = 3;
     }
 }
