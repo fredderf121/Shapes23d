@@ -18,7 +18,7 @@ public interface threeDimensional {
         return 0;
     }
     
-    default public double calculateSurfaceArea(double height, double base_area, int num_sides, double side_length){
+    default public double calculateSurfaceArea(double height, double base_area, double perimeter){
         return 0;
     }
     default public double calculateSurfaceArea(double height, double base_area, double apothem, int num_sides, double side_length){

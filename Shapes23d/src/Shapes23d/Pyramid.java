@@ -10,8 +10,21 @@ package Shapes23d;
  */
 public class Pyramid extends Shape3D implements threeDimensional {
     
+    public void create(){
+        initSides("base");
+        this.height  = getValue("Please enter in the height of the pyramid");
+        this.surface_area = calculateSurfaceArea(this.height, this.base_area, this.apothem, this.sideN, this.lengths.get(0));
+        this.volume = calculateVolume(this.height, this.base_area);
+        displayResults();
+    }
+    public void displayResults(){
+        System.out.println("SA is "+this.surface_area);
+        System.out.println("Vol is "+this.volume);
+    }
+    
+    @Override
     public double calculateVolume(double height, double base_area){
-        return 1/3*height*base_area;
+        return 1.0/3.0*height*base_area;
         }
     
     @Override

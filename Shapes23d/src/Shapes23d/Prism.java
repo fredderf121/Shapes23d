@@ -16,7 +16,7 @@ public class Prism extends Shape3D implements threeDimensional {
     public void create(){
         initSides("base");
         this.height  = getValue("Please enter in the height of the prism");
-        this.surface_area = calculateSurfaceArea(this.height, this.base_area, this.sideN, this.lengths.get(0));
+        this.surface_area = calculateSurfaceArea(this.height, this.base_area, this.perimeter);
         this.volume = calculateVolume(this.height, this.base_area);
         displayResults();
     }
@@ -32,8 +32,8 @@ public class Prism extends Shape3D implements threeDimensional {
         }
     
     @Override
-    public double calculateSurfaceArea(double height, double base_area, int num_sides, double side_length){
-        return height*side_length*num_sides+2*base_area;
+    public double calculateSurfaceArea(double height, double base_area, double perimeter){
+        return height*perimeter+2*base_area;
     }
     
 }
