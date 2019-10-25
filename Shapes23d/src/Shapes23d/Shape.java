@@ -17,5 +17,8 @@ public class Shape {
             lengths.add(sideLength[i]);
         }
     }
+    public static void main(String[] args){
+        
+    }
     
 }
