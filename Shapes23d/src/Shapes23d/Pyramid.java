@@ -8,7 +8,7 @@ package Shapes23d;
  *
  * @author S332896109
  */
-public class Pyramid extends Shape implements threeDimensional {
+public class Pyramid extends Shape3D implements threeDimensional {
     
     public void create(){
         initSides("base");
