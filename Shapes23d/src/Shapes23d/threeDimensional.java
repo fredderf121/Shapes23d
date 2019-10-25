@@ -10,10 +10,7 @@ package Shapes23d;
  * @author S332896109
  */
 public interface threeDimensional {
-    public final double height = 0;
-    public final double volume = 0;
-    public final double surface_area = 0;
-    public final double base_area = 0;
+    
     default public double calculateVolume(double height, double base_area){
         return 0;
     }
@@ -21,10 +18,10 @@ public interface threeDimensional {
         return 0;
     }
     
-    default public double calculateSurfaceArea(double height, double base_area, int num_sides, int side_length){
+    default public double calculateSurfaceArea(double height, double base_area, double perimeter){
         return 0;
     }
-    default public double calculateSurfaceArea(double height, double base_area, double apothem, int num_sides, int side_length){
+    default public double calculateSurfaceArea(double height, double base_area, double apothem, int num_sides, double side_length){
         return 0;
     }
     default public double calculateSurfaceArea(double radius){
