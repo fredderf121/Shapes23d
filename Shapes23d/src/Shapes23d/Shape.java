@@ -12,10 +12,7 @@ import java.util.*;
 public class Shape {
     List<Double> lengths = new ArrayList<>(); 
     int sideN;
-    public double height;
-    public double volume;
-    public double surface_area;
-    public double base_area;
+    
     /*public Shape(double[] sideLength){
         for(int i=0; i<sideLength.length;i++){
             lengths.add(sideLength[i]);
@@ -28,7 +25,6 @@ public class Shape {
         for(int i=0; i<this.sideN;i++){
             this.lengths.add(length);
         }
-        this.base_area = area();
     }
     
     
@@ -36,8 +32,8 @@ public class Shape {
         return(sideN*lengths.get(0));
     }
     public double area(){
-        double apothem = Math.pow(this.lengths.get(0), 2)*this.sideN/(4*Math.tan(Math.toRadians(180/this.sideN)));
-        return apothem;   
+        double area = Math.pow(this.lengths.get(0), 2)*this.sideN/(4*Math.tan(Math.toRadians(180/this.sideN)));
+        return area;   
     }
     
     public static double getValue(String message){
