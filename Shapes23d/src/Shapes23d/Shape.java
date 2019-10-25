@@ -12,17 +12,9 @@ import java.util.*;
 public class Shape {
     List<Double> lengths = new ArrayList<>(); 
     int sideN;
-    
     public double base_area;
     public double perimeter;
-    public double apothem;
-
-    /*public Shape(double[] sideLength){
-        for(int i=0; i<sideLength.length;i++){
-            lengths.add(sideLength[i]);
-        }
-    }*/
-    
+    public double apothem;   
     public void initSides(String identifier){//identifier will either be 'shape' or 'base'
         this.sideN = (int)getValue("How many sides does the "+identifier+" have?"
                 + " Enter in 1 for a circle"); 
@@ -32,7 +24,6 @@ public class Shape {
         for(int i=0; i<this.sideN;i++){
             this.lengths.add(length);
         }
-
         this.apothem = apothem();
         if (sideN == 1){
             this.base_area = area(length);
@@ -41,7 +32,6 @@ public class Shape {
             this.base_area = area();
             this.perimeter = perimeter();
         }
-
     }
     
     public double apothem(){
@@ -61,7 +51,6 @@ public class Shape {
     }
     public double area(double rad){
         return Math.PI*Math.pow(rad, 2);
-
     }
     
     public static double getValue(String message){

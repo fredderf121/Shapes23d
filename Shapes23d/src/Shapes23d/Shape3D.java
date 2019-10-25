@@ -12,10 +12,6 @@ package Shapes23d;
 public class Shape3D extends Shape{
     public double height;
     public double volume;
-    public double surface_area;
-    
-    @Override
-    public void initSides(String identifier){
-        super.initSides(identifier);
+    public double surface_area;  
     }
 }
