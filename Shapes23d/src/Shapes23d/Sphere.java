@@ -9,7 +9,7 @@ package Shapes23d;
  *
  * @author S332896109
  */
-public class Sphere extends Shape implements threeDimensional {
+public class Sphere extends Shape3D implements threeDimensional {
     
     @Override
     public double calculateVolume(double radius){

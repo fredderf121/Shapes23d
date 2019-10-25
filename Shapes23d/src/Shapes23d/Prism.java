@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author S332896109
  */
-public class Prism extends Shape implements threeDimensional {
+public class Prism extends Shape3D implements threeDimensional {
     
         
     public void create(){
