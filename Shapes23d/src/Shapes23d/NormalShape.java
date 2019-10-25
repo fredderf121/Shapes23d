@@ -10,8 +10,10 @@ package Shapes23d;
  * @author S346795925
  */
 public class NormalShape extends Shape{
-    public NormalShape(double[] sideLength, int sideNum){
-        super(sideLength);
+    
+    public NormalShape(double[] sideLength, int sideNum, String shapeIdentifier){
+        
+        //super(sideLength);
         this.sideN = sideNum;
     }
     public double perimeter(){
