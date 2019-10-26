@@ -34,6 +34,10 @@ public class Shape {
         }
     }
     
+    public void create(){
+        initSides("Shape");
+    }
+    
     public double apothem(){
         double apothem = lengths.get(0)/(2*Math.tan(Math.toRadians(180/sideN)));
         return apothem;  
@@ -67,7 +71,17 @@ public class Shape {
         int whichDimension = (int)getValue("Is your shape 3D or 2D? Enter 3 for 3D, 2 for 2D");
         
         if (whichDimension == 2){
-            //dostuff
+            int which2D = (int)getValue("Is the 2D shape a triangle [type 1] or not [type 2]");
+            switch (which2D) {
+                case 1:
+                    Triangle tri1 = new Triangle();
+                    tri1.create();
+                    break;
+                default:
+                    Shape sh1 = new Shape();
+                    sh1.create();
+                    break;
+        }
         }else{
             
             int which3D = (int)getValue("Is the 3D shape a prism (includes cylinder) [type 1], "
