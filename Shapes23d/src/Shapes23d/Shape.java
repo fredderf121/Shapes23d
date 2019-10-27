@@ -17,11 +17,6 @@ public class Shape {
     public double perimeter;
     public double apothem;
 
-    /*public Shape(double[] sideLength){
-        for(int i=0; i<sideLength.length;i++){
-            lengths.add(sideLength[i]);
-        }
-    }*/
     
     public void initSides(String identifier){//identifier will either be 'shape' or 'base'
         this.sideN = (int)getValue("How many sides does the "+identifier+" have?"
