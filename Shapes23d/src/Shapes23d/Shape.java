@@ -37,7 +37,25 @@ public class Shape {
     public void create(){
         initSides("Shape");
     }
-    
+    static public void runProgram(){
+        int whichDimension = (int)getValue("Is your shape 3D or 2D? Enter 3 for 3D, 2 for 2D");
+        
+        if (whichDimension == 2){
+            int which2D = (int)getValue("Is the 2D shape a triangle [type 1] or not [type 2]");
+            switch (which2D) {
+                case 1:
+                    Triangle tri1 = new Triangle();
+                    tri1.create();
+                    break;
+                default:
+                    Shape sh1 = new Shape();
+                    sh1.create();
+                    break;
+            }
+        }else{
+            Shape3D.runProgram3D();            
+        }
+    }
     public double apothem(){
         double apothem = lengths.get(0)/(2*Math.tan(Math.toRadians(180/sideN)));
         return apothem;  
@@ -66,43 +84,6 @@ public class Shape {
     } 
     
     public static void main(String[] args){
-        
-        //getinput        
-        int whichDimension = (int)getValue("Is your shape 3D or 2D? Enter 3 for 3D, 2 for 2D");
-        
-        if (whichDimension == 2){
-            int which2D = (int)getValue("Is the 2D shape a triangle [type 1] or not [type 2]");
-            switch (which2D) {
-                case 1:
-                    Triangle tri1 = new Triangle();
-                    tri1.create();
-                    break;
-                default:
-                    Shape sh1 = new Shape();
-                    sh1.create();
-                    break;
-        }
-        }else{
-            
-            int which3D = (int)getValue("Is the 3D shape a prism (includes cylinder) [type 1], "
-                    + "a pyramid (includes cone) [type 2], "
-                    + "or a sphere? [type 3]");
-            switch (which3D) {
-                case 1:
-                    Prism pr1 = new Prism();
-                    pr1.create();
-                    break;
-                case 2:
-                    Pyramid py1 = new Pyramid();
-                    py1.create();
-                    break;
-                case 3:
-                    break;
-                default:
-                // code block
-            }
-        }
+        runProgram();
     }
-    
-    
 }
