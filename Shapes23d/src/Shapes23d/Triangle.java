@@ -12,7 +12,8 @@ import java.util.*;
 public class Triangle extends Shape {
 
     List<Double> angles = new ArrayList<>();  
-        
+    
+    @Override
     public void create(){
         this.sideN = 3;
         for(int i = 0; i < this.sideN; i++){
@@ -29,9 +30,12 @@ public class Triangle extends Shape {
     }
     public List<Double> calculateAngles(List<Double> sideLengths){
         List<Double> calculatedAngles = new ArrayList<>();  
-        calculatedAngles.add(0.0);//Placeholders
-        calculatedAngles.add(0.0);
-        calculatedAngles.add(0.0);
+        double a = sideLengths.get(0);
+        double b = sideLengths.get(1);
+        double c = sideLengths.get(2);
+        calculatedAngles.add(Math.toDegrees(Math.acos((c*c-a*a-b*b)/((-2)*a*b))));
+        calculatedAngles.add(Math.toDegrees(Math.acos((b*b-c*c-a*a)/((-2)*a*c))));
+        calculatedAngles.add(Math.toDegrees(Math.acos((a*a-c*c-b*b)/((-2)*c*b))));
         return(calculatedAngles);
     }
     public void displayResults(){
