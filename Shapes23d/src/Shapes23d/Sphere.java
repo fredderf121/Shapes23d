@@ -11,13 +11,26 @@ package Shapes23d;
  */
 public class Sphere extends Shape3D implements threeDimensional {
     
+    public void create(){
+        initSides("base");
+        
+        this.surface_area = calculateSurfaceArea(this.lengths.get(0));
+        
+        this.volume = calculateVolume(this.lengths.get(0));
+        displayResults();
+    }
+    public void displayResults(){
+        System.out.println("SA is "+this.surface_area);
+        System.out.println("Vol is "+this.volume);
+    }
+    
     @Override
     public double calculateVolume(double radius){
-        return 4/3*Math.PI*Math.pow(radius, 3);
+        return 4.0/3.0*Math.PI*Math.pow(radius, 3);
     }
     
     @Override
     public double calculateSurfaceArea(double radius){
-        return 4*Math.PI*Math.pow(radius, 2);
+        return 4.0*Math.PI*Math.pow(radius, 2);
     }
 }
