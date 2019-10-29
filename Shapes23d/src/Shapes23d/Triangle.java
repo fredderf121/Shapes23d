@@ -13,8 +13,7 @@ public class Triangle extends Shape {
 
     List<Double> angles = new ArrayList<>();  
     
-    @Override
-    public void create(){
+    public Triangle(){
         this.sideN = 3;
         for(int i = 0; i < this.sideN; i++){
             this.lengths.add((double)getValue("Enter the length of side "+(i+1), 0, Double.MAX_VALUE));

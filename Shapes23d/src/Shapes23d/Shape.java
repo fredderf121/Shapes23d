@@ -16,6 +16,9 @@ public class Shape {
     public double base_area;
     public double perimeter;
     public double apothem;   
+    public void create(String name){
+        initSides(name);
+    }
     public void initSides(String identifier){//identifier will either be 'shape' or 'base'
         
         while (true){
@@ -43,9 +46,6 @@ public class Shape {
         }
     }
     
-    public void create(){
-        initSides("Shape");
-    }
     static public void runProgram(){
         int whichDimension = (int)getValue("Is your shape 3D or 2D? Enter 3 for 3D, 2 for 2D", 2, 3);
         
@@ -54,11 +54,10 @@ public class Shape {
             switch (which2D) {
                 case 1:
                     Triangle tri1 = new Triangle();
-                    tri1.create();
                     break;
                 default:
                     Shape sh1 = new Shape();
-                    sh1.create();
+                    sh1.create("shape");
                     break;
             }
         }else{

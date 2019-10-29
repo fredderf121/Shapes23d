@@ -15,7 +15,7 @@ public class Sphere extends Shape3D implements threeDimensional {
             this.lengths.add(getValue("What is the radius?", 0, Double.MAX_VALUE));         
     }
     
-    public void create(){
+    public Sphere(){
         
         initSides();
         
