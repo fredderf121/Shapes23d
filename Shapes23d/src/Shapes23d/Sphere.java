@@ -10,9 +10,14 @@ package Shapes23d;
  * @author S332896109
  */
 public class Sphere extends Shape3D implements threeDimensional {
+    public void initSides(){//identifier will either be 'shape' or 'base'       
+              
+            this.lengths.add(getValue("What is the radius?", 0, Double.MAX_VALUE));         
+    }
     
     public void create(){
-        initSides("base");
+        
+        initSides();
         
         this.surface_area = calculateSurfaceArea(this.lengths.get(0));
         

@@ -17,11 +17,19 @@ public class Shape {
     public double perimeter;
     public double apothem;   
     public void initSides(String identifier){//identifier will either be 'shape' or 'base'
-        this.sideN = (int)getValue("How many sides does the "+identifier+" have?"
-                + " Enter in 1 for a circle"); 
+        
+        while (true){
+            this.sideN = (int)getValue("How many sides does the "+identifier+" have?"
+                + " Enter in 1 for a circle", 1, Double.MAX_VALUE); 
+            if (!(this.sideN == 2)){
+                break;
+            }
+            System.out.println("Please enter in a valid side number!");
+        }
+        
         double length = getValue("How wide is each side of the "+identifier+" ?"
                 + " Enter in the radius if the "
-                + identifier + " is a circle");
+                + identifier + " is a circle", 0, Double.MAX_VALUE);
         for(int i=0; i<this.sideN;i++){
             this.lengths.add(length);
         }
@@ -39,10 +47,10 @@ public class Shape {
         initSides("Shape");
     }
     static public void runProgram(){
-        int whichDimension = (int)getValue("Is your shape 3D or 2D? Enter 3 for 3D, 2 for 2D");
+        int whichDimension = (int)getValue("Is your shape 3D or 2D? Enter 3 for 3D, 2 for 2D", 2, 3);
         
         if (whichDimension == 2){
-            int which2D = (int)getValue("Is the 2D shape a triangle [type 1] or not [type 2]");
+            int which2D = (int)getValue("Is the 2D shape a triangle [type 1] or not [type 2]", 1, 2);
             switch (which2D) {
                 case 1:
                     Triangle tri1 = new Triangle();
@@ -76,11 +84,24 @@ public class Shape {
         return Math.PI*Math.pow(rad, 2);
     }
     
-    public static double getValue(String message){
+    public static double getValue(String message, double min, double max){
         System.out.println(message);
         Scanner sc = new Scanner(System.in);
-        double val;
-        val=sc.nextDouble();
+        double val;  
+        while (true){ 
+            try{
+                val=sc.nextDouble(); 
+            }catch (Exception e){
+                sc.nextLine();
+                System.out.println("Please enter in a number!");
+                continue;                            
+            }
+             
+            if (val >= min && val <= max && val != 0){
+                break;
+            }
+            System.out.println("Not a valid input!");
+        }        
         return val;
     } 
     
