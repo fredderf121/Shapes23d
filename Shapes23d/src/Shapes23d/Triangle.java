@@ -17,7 +17,7 @@ public class Triangle extends Shape {
     public void create(){
         this.sideN = 3;
         for(int i = 0; i < this.sideN; i++){
-            this.lengths.add((double)getValue("Enter the length of side "+(i+1)));
+            this.lengths.add((double)getValue("Enter the length of side "+(i+1), 0, Double.MAX_VALUE));
         }
         this.base_area = area();
         this.perimeter = perimeter();

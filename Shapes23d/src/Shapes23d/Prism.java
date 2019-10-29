@@ -15,7 +15,7 @@ public class Prism extends Shape3D implements threeDimensional {
         
     public void create(){
         initSides("base");
-        this.height  = getValue("Please enter in the height of the prism");
+        this.height  = getValue("Please enter in the height of the prism",0, Double.MAX_VALUE);
         this.surface_area = calculateSurfaceArea(this.height, this.base_area, this.perimeter);
         this.volume = calculateVolume(this.height, this.base_area);
         displayResults();
