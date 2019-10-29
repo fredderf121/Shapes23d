@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Sphere class
  */
 package Shapes23d;
 
@@ -10,9 +8,9 @@ package Shapes23d;
  * @author S332896109
  */
 public class Sphere extends Shape3D implements threeDimensional {
-    public void initSides(){//identifier will either be 'shape' or 'base'       
+    public void initSides(){      
               
-            this.lengths.add(getValue("What is the radius?", 0, Double.MAX_VALUE));         
+        this.lengths.add(getValue("What is the radius?", 0, Double.MAX_VALUE));         
     }
     
     public Sphere(){

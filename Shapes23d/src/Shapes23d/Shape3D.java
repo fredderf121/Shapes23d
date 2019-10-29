@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * The subclass that contains information that is used for any 3D shape
  */
 package Shapes23d;
 /**
@@ -20,7 +18,6 @@ public class Shape3D extends Shape{
             switch (which3D) {
                 case 1:
                     Prism pr1 = new Prism("base");
-                    //pr1.create();
                     break;
                 case 2:
                     Pyramid py1 = new Pyramid("base");
