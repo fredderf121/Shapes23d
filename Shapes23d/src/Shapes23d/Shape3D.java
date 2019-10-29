@@ -19,16 +19,14 @@ public class Shape3D extends Shape{
                     + "or a sphere? [type 3]", 1, 3);
             switch (which3D) {
                 case 1:
-                    Prism pr1 = new Prism();
-                    pr1.create();
+                    Prism pr1 = new Prism("base");
+                    //pr1.create();
                     break;
                 case 2:
-                    Pyramid py1 = new Pyramid();
-                    py1.create();
+                    Pyramid py1 = new Pyramid("base");
                     break;
                 case 3:
                     Sphere sph1 = new Sphere();
-                    sph1.create();
                     break;
                 default:
                     break;

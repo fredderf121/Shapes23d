@@ -10,8 +10,8 @@ package Shapes23d;
  */
 public class Pyramid extends Shape3D implements threeDimensional {
     
-    public void create(){
-        initSides("base");
+    public Pyramid(String name){
+        initSides(name);
         this.height  = getValue("Please enter in the height of the pyramid", 0, Double.MAX_VALUE);
         
         this.surface_area = calculateSurfaceArea(this.height, this.base_area, this.apothem, this.sideN, this.lengths.get(0));
