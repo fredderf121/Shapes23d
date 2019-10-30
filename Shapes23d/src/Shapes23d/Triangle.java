@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * Triangle Class
+ * 
  */
 package Shapes23d;
 import java.util.*; 
@@ -27,7 +27,18 @@ public class Triangle extends Shape {
     public double perimeter(){
         return(lengths.get(0)+lengths.get(1)+lengths.get(2));
     }
+    
+    @Override
+    public double area(){
+        //Use Heron's formula to determine the area of any triangle
+        double p = this.perimeter/2;
+        double a = lengths.get(0);
+        double b = lengths.get(1);
+        double c = lengths.get(2);
+        return(Math.sqrt(p*(p-a)*(p-b)*(p-c)));
+    }
     public List<Double> calculateAngles(List<Double> sideLengths){
+        //Use cosine law to determine all angles of the triangle
         List<Double> calculatedAngles = new ArrayList<>();  
         double a = sideLengths.get(0);
         double b = sideLengths.get(1);
